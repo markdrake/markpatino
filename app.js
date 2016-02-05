@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var livereload = require('express-livereload')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -56,5 +57,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
+
+livereload(app, config={
+  watchDir: "."
+})
 
 module.exports = app;
