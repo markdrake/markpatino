@@ -1,6 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  p Hello I'm #{name}
-  p I need to learn jade
+    .browser-window
+        .top-bar
+            .circles
+                #close-circle.circle
+                #minimize-circle.circle
+                #maximize-circle.circle
+
+        .content.black-text
+            .row.black.accent-1.white-text
+                #site-layout-example-left.col.s4
+                    p.flat-text-header: i.mdi-action-account-circle.large
+
+                #site-layout-example-right.col.s8
+                    h1.flat-text Marco Pati&ntilde;o
+                    h4.flat-text Software Engineer
+                    p.flat-text
+                    p.flat-text
